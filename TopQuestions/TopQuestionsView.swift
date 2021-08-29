@@ -48,7 +48,7 @@ struct Details: View {
 				Label("\(question.score.thousandsFormatting)", systemImage: "arrowtriangle.up.circle")
 				Label("\(question.answerCount.thousandsFormatting)", systemImage: "ellipses.bubble")
 					.padding(.leading, 108.0)
-				Label("\(question.answerCount.thousandsFormatting)", systemImage: "eye")
+				Label("\(question.viewCount.thousandsFormatting)", systemImage: "eye")
 					.padding(.leading, 204.0)
 			}
 			.foregroundColor(.teal)
