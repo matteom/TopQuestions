@@ -14,6 +14,8 @@
 		9510D80C2AB07DCB005C978C /* TopQuestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510D80B2AB07DCB005C978C /* TopQuestionsTests.swift */; };
 		9510D8162AB07DCB005C978C /* TopQuestionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510D8152AB07DCB005C978C /* TopQuestionsUITests.swift */; };
 		9510D8182AB07DCB005C978C /* TopQuestionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510D8172AB07DCB005C978C /* TopQuestionsUITestsLaunchTests.swift */; };
+		95EE25952AB34EB700F634DA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE25942AB34EB700F634DA /* Question.swift */; };
+		95EE25972AB34EDB00F634DA /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE25962AB34EDB00F634DA /* Wrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		9510D8112AB07DCB005C978C /* TopQuestionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopQuestionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9510D8152AB07DCB005C978C /* TopQuestionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopQuestionsUITests.swift; sourceTree = "<group>"; };
 		9510D8172AB07DCB005C978C /* TopQuestionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopQuestionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95EE25942AB34EB700F634DA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		95EE25962AB34EDB00F634DA /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				9510D7FA2AB07DCA005C978C /* TopQuestionsApp.swift */,
 				9510D7FC2AB07DCA005C978C /* ContentView.swift */,
+				95EE25962AB34EDB00F634DA /* Wrapper.swift */,
+				95EE25942AB34EB700F634DA /* Question.swift */,
 				9510D7FE2AB07DCA005C978C /* Assets.xcassets */,
 				9510D8002AB07DCA005C978C /* Preview Content */,
 			);
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EE25952AB34EB700F634DA /* Question.swift in Sources */,
+				95EE25972AB34EDB00F634DA /* Wrapper.swift in Sources */,
 				9510D7FD2AB07DCA005C978C /* ContentView.swift in Sources */,
 				9510D7FB2AB07DCA005C978C /* TopQuestionsApp.swift in Sources */,
 			);
