@@ -1,0 +1,196 @@
+{
+	"items": [
+		{
+			"tags": [
+				"swift",
+				"swiftui",
+				"swift5",
+				"keyword"
+			],
+			"owner": {
+				"reputation": 5088,
+				"profile_image": "https://www.gravatar.com/avatar/636e5a5a698ebfa8894a4272ade4c1c7?s=256&d=identicon&r=PG&f=y&so-version=2",
+				"display_name": "Half"
+			},
+			"view_count": 75326,
+			"answer_count": 16,
+			"score": 416,
+			"creation_date": 1559591221,
+			"question_id": 56433665,
+			"body_markdown": "The new [SwiftUI tutorial][1] has the following code:\r\n\r\n```swift\r\nstruct ContentView: View {\r\n    var body: some View {\r\n        Text(\"Hello World\")\r\n    }\r\n}\r\n```\r\n\r\nThe second line the word `some`, and on their site is highlighted as if it were a keyword.\r\n\r\nSwift 5.1 does not appear to have `some` as a keyword, and I don't see what else the word `some` could be doing there, since it goes where the type usually goes. Is there a new, unannounced version of Swift? Is it a function that's being used on a type in a way I didn't know about?\r\n\r\nWhat does the keyword `some` do?\r\n\r\n  [1]: https://developer.apple.com/tutorials/swiftui/creating-and-combining-views\r\n\r\n",
+			"title": "What is the \"some\" keyword in Swift(UI)?"
+		},
+		{
+			"tags": [
+				"ios",
+				"swift",
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 5454,
+				"profile_image": "https://i.stack.imgur.com/ii5Uy.jpg?s=256&g=1",
+				"display_name": "inokey"
+			},
+			"view_count": 292217,
+			"answer_count": 15,
+			"score": 320,
+			"creation_date": 1559649898,
+			"question_id": 56443535,
+			"body_markdown": "Among the many properties of the `Text` view, I couldn't find any related to text alignment. I've seen in a demo that it automatically handles RTL, and when placing stuff using View's `body`, it always centers it automatically.\r\n\r\nIs there some concept that I'm missing about layout system in `SwiftUI` and if not, how can I set the text alignment properties to the `Text`?",
+			"title": "SwiftUI text-alignment"
+		},
+		{
+			"tags": [
+				"view",
+				"background",
+				"background-color",
+				"modifier",
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 3836,
+				"profile_image": "https://www.gravatar.com/avatar/5d11069b9a4290d7c914411ad43e839e?s=256&d=identicon&r=PG&f=y&so-version=2",
+				"display_name": "jeremyabannister"
+			},
+			"view_count": 347658,
+			"answer_count": 20,
+			"score": 286,
+			"creation_date": 1559619534,
+			"question_id": 56437036,
+			"body_markdown": "I'm beginning to try out `SwiftUI` and I'm surprised that it doesn't seem to be straightforward to change the background color of a `View`. How do you do this using `SwiftUI`?",
+			"title": "SwiftUI - How do I change the background color of a View?"
+		},
+		{
+			"tags": [
+				"swift",
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 10365,
+				"profile_image": "https://www.gravatar.com/avatar/68db531bfa7a137fafc5b08c1e4c5519?s=256&d=identicon&r=PG",
+				"display_name": "keegan3d"
+			},
+			"view_count": 104918,
+			"answer_count": 7,
+			"score": 272,
+			"creation_date": 1562772217,
+			"question_id": 56973959,
+			"body_markdown": "I am working on a money input screen and I need to implement a custom `init` to set a state variable based on the initialized amount.\r\n\r\nI thought the following would work:\r\n\r\n```lang-swift\r\nstruct AmountView : View {\r\n\r\n    @Binding var amount: Double   \r\n    @State var includeDecimal = false\r\n\r\n    init(amount: Binding<Double>) {\r\n        self.amount = amount\r\n        self.includeDecimal = round(amount)-amount > 0\r\n    }\r\n}\r\n```\r\n\r\nHowever, this gives me a compiler error as follows:\r\n\r\n> Cannot assign value of type 'Binding<Double>' to type 'Double'\r\n\r\nHow do I implement a custom `init` method which takes in a `Binding` struct?",
+			"title": "SwiftUI: How to implement a custom init with @Binding variables"
+		},
+		{
+			"tags": [
+				"ios",
+				"swift",
+				"xcode",
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 17857,
+				"profile_image": "https://i.stack.imgur.com/daX8Z.png?s=256&g=1",
+				"display_name": "ielyamani"
+			},
+			"view_count": 235266,
+			"answer_count": 18,
+			"score": 257,
+			"creation_date": 1559875082,
+			"question_id": 56487323,
+			"body_markdown": "Given this code:\r\n\r\n```lang-swift\r\nimport SwiftUI\r\n\r\nstruct ContentView: View {\r\n  var body: some View {\r\n    VStack(alignment: .leading) {\r\n      Text(\"Title\")\r\n        .font(.title)\r\n\r\n      Text(\"Content\")\r\n        .lineLimit(nil)\r\n        .font(.body)\r\n\r\n      Spacer()\r\n    }\r\n    .background(Color.red)\r\n  }\r\n}\r\n\r\n#if DEBUG\r\nstruct ContentView_Previews : PreviewProvider {\r\n  static var previews: some View {\r\n    ContentView()\r\n  }\r\n}\r\n#endif\r\n```\r\n---\r\n\r\nIt results in this interface:\r\n\r\n[![preview][1]][1]\r\n\r\nHow can I make the `VStack` fill the width of the screen even if the labels/text components don't need the full width?\r\n\r\n---\r\n\r\nA trick I've found is to insert an *empty* `HStack` in the structure like so:\r\n\r\n```lang-swift\r\nVStack(alignment: .leading) {\r\n  HStack {\r\n    Spacer()\r\n  }\r\n  Text(\"Title\")\r\n    .font(.title)\r\n\r\n  Text(\"Content\")\r\n    .lineLimit(nil)\r\n    .font(.body)\r\n\r\n  Spacer()\r\n}\r\n```\r\n\r\nWhich yields the desired design:\r\n\r\n[![desired output][2]][2]\r\n\r\nIs there a better way?\r\n\r\n\r\n  [1]: https://i.stack.imgur.com/B87Ym.png\r\n  [2]: https://i.stack.imgur.com/XK2cY.png",
+			"title": "Make a VStack fill the width of the screen in SwiftUI"
+		},
+		{
+			"tags": [
+				"ios",
+				"swift",
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 6148,
+				"profile_image": "https://i.stack.imgur.com/onfK4.png?s=256&g=1",
+				"display_name": "Daniil Subbotin"
+			},
+			"view_count": 248743,
+			"answer_count": 25,
+			"score": 254,
+			"creation_date": 1559991356,
+			"question_id": 56505692,
+			"body_markdown": "I have a large image in Assets.xcassets. How to resize this image with SwiftUI to make it small?\r\n\r\nI tried to set frame but it doesn't work:\r\n\r\n    Image(room.thumbnailImage)\r\n        .frame(width: 32.0, height: 32.0)",
+			"title": "How to resize Image with SwiftUI?"
+		},
+		{
+			"tags": [
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 12109,
+				"profile_image": "https://i.stack.imgur.com/JjI1n.png?s=256&g=1",
+				"display_name": "Johnykutty"
+			},
+			"view_count": 168873,
+			"answer_count": 14,
+			"score": 242,
+			"creation_date": 1559919115,
+			"question_id": 56496638,
+			"body_markdown": "Trying to add a full screen activity indicator in SwiftUI.\r\n\r\nI can use `.overlay(overlay: )` function in `View` Protocol. \r\n\r\nWith this, I can make any view overlay, but I can't find the iOS default style `UIActivityIndicatorView` equivalent in `SwiftUI`.\r\n\r\nHow can I make a default style spinner with `SwiftUI`?\r\n\r\n**NOTE:** This is not about adding activity indicator in UIKit framework.",
+			"title": "Activity indicator in SwiftUI"
+		},
+		{
+			"tags": [
+				"user-interface",
+				"rounding",
+				"swiftui",
+				"cornerradius"
+			],
+			"owner": {
+				"reputation": 4111,
+				"profile_image": "https://lh4.googleusercontent.com/-iS_nmdSEimg/AAAAAAAAAAI/AAAAAAAAi58/HXArWQl8Nvc/photo.jpg?sz=256",
+				"display_name": "Richard Witherspoon"
+			},
+			"view_count": 104147,
+			"answer_count": 10,
+			"score": 233,
+			"creation_date": 1561488608,
+			"question_id": 56760335,
+			"body_markdown": "I know you can use `.cornerRadius()` to round all the corners of a swiftUI view but is there a way to round only specific corners such as the top?",
+			"title": "Round Specific Corners SwiftUI"
+		},
+		{
+			"tags": [
+				"ios",
+				"swift",
+				"swiftui",
+				"swiftui-list",
+				"swiftui-navigationview"
+			],
+			"owner": {
+				"reputation": 2532,
+				"profile_image": "https://i.stack.imgur.com/CyWOM.jpg?s=256&g=1",
+				"display_name": "Vapidant"
+			},
+			"view_count": 135716,
+			"answer_count": 26,
+			"score": 213,
+			"creation_date": 1565917279,
+			"question_id": 57517803,
+			"body_markdown": "I am new to SwiftUI (like most people) and trying to figure out how to remove some *whitespace* above a `List` that I embedded in a `NavigationView`.\r\n\r\nIn this image, you can see that there is some white space above the `List`.\r\n\r\n![Current Version](https://i.stack.imgur.com/cqyRe.png)\r\n\r\nWhat I want to accomplish is this:\r\n\r\n![Ideal Version](https://i.stack.imgur.com/03pSB.png)\r\n\r\nI've tried using:\r\n\r\n    .navigationBarHidden(true)\r\n\r\nbut this did not make any noticeable changes.\r\n\r\nI'm currently setting up my navigiationView like this:\r\n\r\n```\r\nNavigationView {\r\n    FileBrowserView(jsonFromCall: URLRetrieve(URLtoFetch: applicationDelegate.apiURL))\r\n        .navigationBarHidden(true)\r\n}\r\n```\r\n\r\nwhere `FileBrowserView` is a view with a `List` and `FileCell`s defined like this:\r\n\r\n```\r\nList {\r\n   Section(header: Text(\"Root\")) {\r\n       FileCell(name: \"Test\", fileType: \"JPG\",fileDesc: \"Test number 1\")\r\n       FileCell(name: \"Test 2\", fileType: \"txt\",fileDesc: \"Test number 2\")\r\n       FileCell(name: \"test3\", fileType: \"fasta\", fileDesc: \"\")\r\n    }\r\n}\r\n```\r\n\r\nI do want to note that the ultimate goal here is that you will be able to click on these cells to navigate deeper into a file tree and thus should display a Back button on the bar on deeper navigation, but I do not want anything at the top as such during my initial view.",
+			"title": "How to remove the default Navigation Bar space in SwiftUI NavigationView"
+		},
+		{
+			"tags": [
+				"swiftui"
+			],
+			"owner": {
+				"reputation": 2305,
+				"profile_image": "https://www.gravatar.com/avatar/b9d3c40dfa6c7b5fdbd01e859e90ddf4?s=256&d=identicon&r=PG",
+				"display_name": "Daniel Messner"
+			},
+			"view_count": 71892,
+			"answer_count": 8,
+			"score": 198,
+			"creation_date": 1561054044,
+			"question_id": 56691630,
+			"body_markdown": "I would like to initialise the value of a `@State` var in SwiftUI through the `init()` method of a `Struct`, so it can take the proper text from a prepared dictionary for manipulation purposes in a TextField.\r\nThe source code looks like this:\r\n\r\n```\r\nstruct StateFromOutside: View {\r\n    let list = [\r\n        \"a\": \"Letter A\",\r\n        \"b\": \"Letter B\",\r\n        // ...\r\n    ]\r\n    @State var fullText: String = \"\"\r\n\r\n    init(letter: String) {\r\n        self.fullText = list[letter]!\r\n    }\r\n\r\n    var body: some View {\r\n        TextField($fullText)\r\n    }\r\n}\r\n```\r\n\r\nUnfortunately the execution fails with the error `Thread 1: Fatal error: Accessing State<String> outside View.body`\r\n\r\nHow can I resolve the situation? Thank you very much in advance!",
+			"title": "SwiftUI @State var initialization issue"
+		}
+	]
+}
