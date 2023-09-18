@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Wrapper: Codable {
-	let items: [Question]
+struct Wrapper<T: Codable>: Codable {
+	let items: [T]
 }

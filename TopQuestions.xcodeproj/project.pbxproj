@@ -21,6 +21,7 @@
 		953339FA2AB61C6800AAFD03 /* TopQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953339F62AB61C6800AAFD03 /* TopQuestionsView.swift */; };
 		953339FB2AB61C6800AAFD03 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953339F72AB61C6800AAFD03 /* QuestionView.swift */; };
 		953339FD2AB61C6800AAFD03 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953339F92AB61C6800AAFD03 /* Details.swift */; };
+		954A2CBD2AB8DE9F00FB93C1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954A2CBC2AB8DE9F00FB93C1 /* APIManager.swift */; };
 		95EE25952AB34EB700F634DA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE25942AB34EB700F634DA /* Question.swift */; };
 		95EE25972AB34EDB00F634DA /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE25962AB34EDB00F634DA /* Wrapper.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		953339F62AB61C6800AAFD03 /* TopQuestionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopQuestionsView.swift; sourceTree = "<group>"; };
 		953339F72AB61C6800AAFD03 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		953339F92AB61C6800AAFD03 /* Details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		954A2CBC2AB8DE9F00FB93C1 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		95EE25942AB34EB700F634DA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		95EE25962AB34EDB00F634DA /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				953339F62AB61C6800AAFD03 /* TopQuestionsView.swift */,
 				953339F72AB61C6800AAFD03 /* QuestionView.swift */,
 				953339F92AB61C6800AAFD03 /* Details.swift */,
+				954A2CBC2AB8DE9F00FB93C1 /* APIManager.swift */,
 				953339EF2AB619AB00AAFD03 /* JSONDecoder+API.swift */,
 				95EE25962AB34EDB00F634DA /* Wrapper.swift */,
 				95EE25942AB34EB700F634DA /* Question.swift */,
@@ -289,6 +292,7 @@
 				95EE25972AB34EDB00F634DA /* Wrapper.swift in Sources */,
 				953339FA2AB61C6800AAFD03 /* TopQuestionsView.swift in Sources */,
 				9510D7FD2AB07DCA005C978C /* ContentView.swift in Sources */,
+				954A2CBD2AB8DE9F00FB93C1 /* APIManager.swift in Sources */,
 				953339F02AB619AB00AAFD03 /* User.swift in Sources */,
 				953339F52AB619BE00AAFD03 /* PreviewData.swift in Sources */,
 				953339FD2AB61C6800AAFD03 /* Details.swift in Sources */,
