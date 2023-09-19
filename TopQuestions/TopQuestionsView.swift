@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TopQuestionsView: View {
-	let questions: [Question]
+	@State private var model = Model()
 
 	var body: some View {
-		List(questions) { question in
+		List(model.questions) { question in
 			NavigationLink(value: question) {
 				Details(question: question)
 					.alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] }
@@ -21,6 +21,8 @@ struct TopQuestionsView: View {
 		.listRowInsets(.none)
 		.listRowSpacing(8.0)
 		.navigationTitle("Top Questions")
+		.task { try? await model.fetchTopQuestions() }
+		.refreshable { try? await model.fetchTopQuestions() }
 		.navigationDestination(for: Question.self) { question in
 			QuestionView(question: question)
 		}
@@ -29,6 +31,6 @@ struct TopQuestionsView: View {
 
 #Preview {
 	NavigationStack {
-		TopQuestionsView(questions: .preview)
+		TopQuestionsView()
 	}
 }

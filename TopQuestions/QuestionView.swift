@@ -8,23 +8,34 @@
 import SwiftUI
 
 struct QuestionView: View {
-	let question: Question
+	@State private var model: Model
+
+	init(question: Question) {
+		let model = Model(question: question)
+		self._model = .init(initialValue: model)
+	}
 
 	var body: some View {
 		ScrollView(.vertical) {
 			LazyVStack(alignment: .leading, spacing: 24.0) {
-				Details(question: question)
-				if let body = question.body {
-					Text(try! AttributedString(markdown: body))
-				}
-				if let owner = question.owner {
-					Owner(user: owner)
-						.frame(maxWidth: .infinity, alignment: .trailing)
+				Details(question: model.question)
+				if model.isLoading {
+					ProgressView()
+						.frame(maxWidth: .infinity, alignment: .center)
+				} else {
+					if let body = model.question.body {
+						Text(try! AttributedString(markdown: body))
+					}
+					if let owner = model.question.owner {
+						Owner(user: owner)
+							.frame(maxWidth: .infinity, alignment: .trailing)
+					}
 				}
 			}
 			.padding(.horizontal, 20.0)
 		}
 		.navigationTitle("Question")
+		.task { try? await model.loadQuestion() }
 	}
 }
 
